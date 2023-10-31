@@ -1,0 +1,113 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #094109;
+}
+
+h1 {
+    text-align: center;
+    font-size: 24px;
+    color: #beccda;
+}
+
+.card-container {
+    display: flex;
+}
+
+.card-flip {
+    animation: flipAnimation 0.5s linear forwards;
+    transform-style: preserve-3d;
+}
+
+.card {
+    /* Restez avec les styles existants des cartes */
+    width: 80px;
+    height: 120px;
+    background-color: white;
+    border: 1px solid #000;
+    border-radius: 5px;
+    margin: 5px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card:hover {
+    background-color: #f2f2f2;
+    opacity: 0.8;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.5);
+    transition: background-color 0.3s, opacity 0.3s, box-shadow 0.3s;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.card-animation {
+    animation-name: cardFadeIn;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+
+/* Styles des cartes de cœur et de carreau */
+.card.heart, .card.diamond {
+    color: red;
+}
+
+/* Styles des cartes de pique et de trèfle */
+.card.spade, .card.club {
+    color: black;
+}
+
+@keyframes cardFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+/* Style des boutons */
+button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 5px;
+}
+button:hover {
+    background-color: #2980b9;
+}
+
+#triFormesBtn {
+    background-color: #27ae60;
+    color: #fff;
+}
+#triFormesBtn:hover {
+    background-color: #219351;
+}
+
+#triNbBtn {
+    background-color: #e74c3c;
+    color: #fff;
+}
+#triNbBtn:hover {
+    background-color: #c14031;
+}
